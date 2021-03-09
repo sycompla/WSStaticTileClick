@@ -1,0 +1,55 @@
+<mvc:View
+        controllerName="sources.controllers.view2"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.f"
+        xmlns:card="sap.f.cards"
+        xmlns:w="sap.ui.integration.widgets"
+        displayBlock="true"
+        height="100%">
+    <Shell>
+        <App class="sapUiResponsiveMargin" width="auto">
+            <pages>
+                <Page title="test2">
+                    <content>
+                        <Table id="Services"
+                               growing="true"
+                               growingThreshold="5"
+                               items="{/data}">
+                            <headerToolbar>
+                            </headerToolbar>
+                            <columns>
+                                <Column>
+                                    <Text text="Service" />
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <Text text="ThreadId" />
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <Text text="Result" />
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <Text text="Result message" />
+                                </Column>
+                                <Column minScreenWidth="Tablet" demandPopin="true">
+                                    <Text text="Result description" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Detail" detailPress="onDetailPress">
+                                    <cells>
+                                        <Input id="serviceId" value="{service}" valueLiveUpdate="true" />
+                                        <Input id="threadId" value="{threadId}" valueLiveUpdate="true" />
+                                        <Input id="resultId" value="{result}" valueLiveUpdate="true" />
+                                        <Input id="resultMId" value="{resultMessage}" valueLiveUpdate="true" />
+                                        <Input id="resultDId" value="{resultDescription}" valueLiveUpdate="true" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

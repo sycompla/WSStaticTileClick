@@ -1,0 +1,41 @@
+<mvc:View
+        controllerName="sources.controllers.view1"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.f"
+        xmlns:card="sap.f.cards"
+        xmlns:w="sap.ui.integration.widgets"
+        displayBlock="true"
+        height="100%">
+    <Shell>
+        <App class="sapUiResponsiveMargin" width="auto">
+            <pages>
+                <Page title="test">
+                    <content>
+                        <Panel id="idPnl" >
+
+                            <ScrollContainer
+                                    id="ScrollP"
+                                    height="100%"
+                                    width="100%"
+                                    vertical="true">
+
+                                <f:GridContainer
+                                        id="grid1"
+                                        class="sapUiSmallMargin"
+                                        snapToRow="true">
+                                    <f:layout>
+                                        <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                                    </f:layout>
+                                    <f:layoutXS>
+                                        <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                                    </f:layoutXS>
+                                </f:GridContainer>
+                            </ScrollContainer>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

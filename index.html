@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+            id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-libs="sap.m"></script>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+<body class="sapUiBody" id="content" >
+<script type="text/javascript">
+
+    sap.ui.localResources("sources");
+/*
+    sap.ui.controller("view.Main", {
+        doSomething : function(oEvent) {}
+    });
+    var oView = sap.ui.view({
+        viewName: "sources.views.view1",
+        type: sap.ui.core.mvc.ViewType.XML
+    });
+    oView.placeAt("content");
+
+    oView.getController().addTile("Első csempe");
+    oView.getController().addTile("Második csempe");
+    oView.getController().addTile("Harmadik csempe");
+*/
+
+    let app = new sap.m.App({initialPage:"idMain"});
+    let pageMain = sap.ui.view({id:"idMain", viewName:"sources.views.view1", type:sap.ui.core.mvc.ViewType.XML});
+    app.addPage(pageMain);
+    let view2 = sap.ui.view({id:"idView2", viewName:"sources.views.view2", type:sap.ui.core.mvc.ViewType.XML});
+    app.addPage(view2);
+    app.placeAt("content");
+
+    pageMain.getController().addTile("Első csempe");
+    pageMain.getController().addTile("Második csempe");
+    pageMain.getController().addTile("Harmadik csempe");
+</script>
+</body>
+</html>
