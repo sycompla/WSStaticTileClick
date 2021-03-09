@@ -92,7 +92,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller'],
                                     new sap.m.Text({text:"{mainModel>threadId}"}),
                                     new sap.m.Text({text:"{mainModel>result}"}),
                                     new sap.m.Text({text:"{mainModel>resultMessage}"}),
-                                    new sap.m.Text({text:"{mainModel>resultDescription"})
+                                    new sap.m.Text({text:"{mainModel>resultDescription}"})
                                 ]
                             })
                         });
