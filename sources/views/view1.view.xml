@@ -5,9 +5,10 @@
         xmlns:f="sap.f"
         xmlns:card="sap.f.cards"
         xmlns:w="sap.ui.integration.widgets"
+        xmlns:core="sap.ui.core"
         displayBlock="true"
         height="100%">
-    <Shell appWithLimited="false">
+    <Shell appWidthLimited="false">
         <App width="auto">
             <pages>
                 <Page title="test">
@@ -30,6 +31,7 @@
                                     <f:layoutXS>
                                         <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
                                     </f:layoutXS>
+                                    <core:Fragment fragmentName="sources.fragments.QuickViewCard" type="XML" />
                                 </f:GridContainer>
                             </ScrollContainer>
                         </Panel>
